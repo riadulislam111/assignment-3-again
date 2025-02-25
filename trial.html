@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class="bg-[#FFF9F4] w-full h-[100px] flex items-center justify-between px-6 md:px-10 lg:px-16 relative">
+        <!-- Left Side -->
+        <div class="flex items-center">
+            <img src="./assets/logo-header.png" alt="Logo" class="h-10">
+            <h2 class="ml-3 text-lg md:text-xl lg:text-2xl font-semibold">
+                Browse<span class="text-[#FFDC26]">4</span>Pets
+            </h2>
+        </div>
+    
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="block md:hidden focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+    
+        <!-- Navigation Links -->
+        <div id="menu" class="hidden md:flex md:items-center md:space-x-6 lg:space-x-10 absolute md:static bg-[#FFF9F4] w-full md:w-auto left-0 top-[100px] md:top-0 p-5 md:p-0 shadow-md md:shadow-none">
+            <a href="#" class="block md:inline-block text-lg lg:text-xl font-medium py-2">Find a pet</a>
+            <a href="#" class="block md:inline-block text-lg lg:text-xl font-medium py-2">Breeds</a>
+            <a href="#" class="block md:inline-block text-lg lg:text-xl font-medium py-2">Contact us</a>
+            
+            <!-- Icons & Buttons -->
+            <div class="flex items-center mt-4 md:mt-0 space-x-3 lg:space-x-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-7 lg:h-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-7 lg:h-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+    
+                <button class="py-2 px-4 lg:px-6 lg:py-3 bg-[#FFF9F4] text-black border rounded-md">Login</button>
+                <button class="py-2 px-4 lg:px-6 lg:py-3 bg-[#FFDC26] text-black border rounded-md animate-bounce">Register</button>
+            </div>
+        </div>
+    </nav>
+    
+    <script>
+    document.getElementById("menu-btn").addEventListener("click", function() {
+        document.getElementById("menu").classList.toggle("hidden");
+    });
+    </script>
+    
+    <section class="w-full bg-[#FFF9F4] py-10">
+        <!-- banner section -->
+        <div class="max-w-[1320px] mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-10 lg:px-16">
+            <!-- Left Side: Text Content -->
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                    Pamper Your Pet, <br> Because They Deserve <br> the Best
+                </h1>
+                <p class="mt-4 text-lg md:text-xl">
+                    Discover a world of treats, toys, and essentials handpicked for <br class="hidden md:block"> 
+                    your furry friends. Shop now and make tails wag with joy!
+                </p>
+                <button class="mt-6 bg-[#FFDC26] w-[150px] h-[45px] rounded-xl text-lg font-medium animate-spin scale-50">
+                    Find a Pet
+                </button>
+            </div>
+    
+            <!-- Right Side: Image -->
+            <div class="md:w-1/2 flex justify-center mt-6 md:mt-0">
+                <img class="w-full md:w-[385px] lg:w-[600px]" src="./assets/cat-big.png" alt="" >
+            </div>
+        </div>
+    </section>
+    
+    <section class="w-full py-10 bg-[#FFF9F4] text-center">
+        <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl mb-8">Browse By Categories</h1>
+    
+        <!-- Categories Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1320px] mx-auto px-6 md:px-10">
+            <!-- Category Card -->
+            <div class="bg-[#F9DF8A] w-full max-w-[250px] md:max-w-[300px] h-[280px] rounded-xl shadow-lg mx-auto flex flex-col items-center justify-center">
+                <div class="w-24 h-24 flex items-center justify-center">
+                    <img src="./assets/dog-cartoon.png" alt="Dog" class="w-full">
+                </div>
+                <h3 class="text-black font-bold text-xl mt-4">Dog</h3>
+                <p class="text-black text-lg">3 items</p>
+            </div>
+    
+            <!-- More Category Cards (Example) -->
+            <div class="bg-[#E3F2FD] w-full max-w-[250px] md:max-w-[300px] h-[280px] rounded-xl shadow-lg mx-auto flex flex-col items-center justify-center">
+                <div class="w-24 h-24 flex items-center justify-center">
+                    <img src="./assets/cat-cartoon.png" alt="Cat" class="w-full">
+                </div>
+                <h3 class="text-black font-bold text-xl mt-4">Cat</h3>
+                <p class="text-black text-lg">5 items</p>
+            </div>
+    
+            <div class="bg-[#C8E6C9] w-full max-w-[250px] md:max-w-[300px] h-[280px] rounded-xl shadow-lg mx-auto flex flex-col items-center justify-center">
+                <div class="w-24 h-24 flex items-center justify-center">
+                    <img src="./assets/bird-cartoon.png" alt="Bird" class="w-full">
+                </div>
+                <h3 class="text-black font-bold text-xl mt-4">Bird</h3>
+                <p class="text-black text-lg">4 items</p>
+            </div>
+    
+            <div class="bg-[#FFCDD2] w-full max-w-[250px] md:max-w-[300px] h-[280px] rounded-xl shadow-lg mx-auto flex flex-col items-center justify-center">
+                <div class="w-24 h-24 flex items-center justify-center">
+                    <img src="./assets/fish-cartoon.png" alt="Fish" class="w-full">
+                </div>
+                <h3 class="text-black font-bold text-xl mt-4">Fish</h3>
+                <p class="text-black text-lg">6 items</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- tending section  -->
+    <section class="w-full bg-[#FFF9F4] py-10">
+        <div class="max-w-[1320px] mx-auto px-6 md:px-10">
+            <h1 class="text-center font-bold text-3xl md:text-4xl lg:text-5xl mb-10">Trending Pet Products</h1>
+    
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Left: Featured Product -->
+                <div class="bg-[#F9DF8A] p-6 rounded-2xl shadow-lg flex flex-col justify-center">
+                    <h2 class="text-black text-2xl md:text-3xl font-bold">T-Shirt For Dogs</h2>
+                    <p class="text-gray-600 mt-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod ea animi quia modi quaerat quos.
+                    </p>
+                    <button class="mt-4 bg-white w-[150px] h-[45px] rounded-xl text-lg font-medium">Find a pet</button>
+                </div>
+    
+                <!-- Right: Product List -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Product Card 1 -->
+                    <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+                        <img src="./assets/dog-cartoon.png" alt="Pet Bed" class="w-16 h-16">
+                        <div class="ml-3">
+                            <h3 class="text-black font-semibold">4.5 ⭐</h3>
+                            <h2 class="text-black text-lg font-bold">Pet Bed</h2>
+                            <p class="text-black">$39.99</p>
+                        </div>
+                    </div>
+    
+                    <!-- Product Card 2 -->
+                    <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+                        <img src="./assets/cat-cartoon.png" alt="Cat Toy" class="w-16 h-16">
+                        <div class="ml-3">
+                            <h3 class="text-black font-semibold">4.8 ⭐</h3>
+                            <h2 class="text-black text-lg font-bold">Cat Toy</h2>
+                            <p class="text-black">$19.99</p>
+                        </div>
+                    </div>
+    
+                    <!-- Product Card 3 -->
+                    <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+                        <img src="./assets/fish-cartoon.png" alt="Fish Tank" class="w-16 h-16">
+                        <div class="ml-3">
+                            <h3 class="text-black font-semibold">4.7 ⭐</h3>
+                            <h2 class="text-black text-lg font-bold">Fish Tank</h2>
+                            <p class="text-black">$49.99</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
